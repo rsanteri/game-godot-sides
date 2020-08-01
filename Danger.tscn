@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="Damage" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 16.0
+margin_bottom = 16.0
+color = Color( 1, 0, 0, 0.643137 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="." groups=[
+"Damage",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 8, 8 )
+shape = SubResource( 1 )

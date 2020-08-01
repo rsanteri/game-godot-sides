@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Switch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SwitchPlatform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Grave.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Danger.tscn" type="PackedScene" id=8]
+
+[node name="lvl_switch3" type="Node2D"]
+
+[node name="Stage" parent="." instance=ExtResource( 2 )]
+
+[node name="Platforms" type="Node2D" parent="Stage"]
+position = Vector2( 152, 8 )
+
+[node name="platform2" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 0, 136 )
+scale = Vector2( 0.08, 1 )
+
+[node name="platform3" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 432, 88 )
+scale = Vector2( 0.08, 1 )
+
+[node name="platform5" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 704, 248 )
+scale = Vector2( 0.08, 1 )
+
+[node name="platform4" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 904, 200 )
+scale = Vector2( 0.0399989, 1.00809 )
+
+[node name="SwitchPlatforms" type="Node2D" parent="Stage"]
+position = Vector2( 208, 32 )
+
+[node name="Switch" parent="Stage/SwitchPlatforms" instance=ExtResource( 6 )]
+position = Vector2( 800, 32 )
+scale = Vector2( 0.489947, 5.52062 )
+
+[node name="Switch2" parent="Stage/SwitchPlatforms" instance=ExtResource( 6 )]
+position = Vector2( 464, 416 )
+scale = Vector2( 6.95056, 0.468949 )
+
+[node name="Goal" parent="Stage" instance=ExtResource( 4 )]
+position = Vector2( 1080, 175 )
+
+[node name="Switch" parent="Stage" instance=ExtResource( 5 )]
+position = Vector2( 784, 416 )
+
+[node name="Grave3" parent="Stage" instance=ExtResource( 7 )]
+position = Vector2( 440, 296 )
+
+[node name="Grave4" parent="Stage" instance=ExtResource( 7 )]
+position = Vector2( 768, 184 )
+
+[node name="Grave5" parent="Stage" instance=ExtResource( 7 )]
+position = Vector2( 784, 600 )
+
+[node name="Damage" parent="Stage" instance=ExtResource( 8 )]
+position = Vector2( 384, 120 )
+scale = Vector2( 8.28, 1 )
+
+[node name="Player" parent="Stage" instance=ExtResource( 3 )]
+position = Vector2( 208, 128 )

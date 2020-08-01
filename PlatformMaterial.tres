@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float gravity_dir = 1.0;
+
+
+void fragment() {
+	bool gravity_direction = 0.5 < gravity_dir;
+
+	if (gravity_direction && UV.y < 0.5) {
+		COLOR.a = 0.0;
+	} else if (!gravity_direction && UV.y > 0.5) {
+		COLOR.a = 0.0;
+	} else {
+		COLOR = vec4(0,0,0, (gravity_direction ? gravity_dir - UV.y : UV.y - gravity_dir) - 0.2);
+	}
+	
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/gravity_dir = 1.0

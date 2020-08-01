@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=4]
+
+[node name="lvl_ez" type="Node2D"]
+
+[node name="Stage" parent="." instance=ExtResource( 2 )]
+
+[node name="Platforms" type="Node2D" parent="Stage"]
+position = Vector2( 48, 8 )
+
+[node name="platform" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 72, 368 )
+scale = Vector2( 0.16, 1 )
+
+[node name="platform2" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 288, 288 )
+scale = Vector2( 0.24, 1 )
+
+[node name="platform3" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 576, 208 )
+scale = Vector2( 0.359999, 1.00809 )
+
+[node name="platform4" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 928, 472 )
+scale = Vector2( 0.0399989, 1.00809 )
+
+[node name="Goal" parent="Stage" instance=ExtResource( 4 )]
+position = Vector2( 1002, 447 )
+
+[node name="Player" parent="Stage" instance=ExtResource( 3 )]
+position = Vector2( 160, 360 )

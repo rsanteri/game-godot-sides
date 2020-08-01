@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Grave.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=5]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Stage" parent="." instance=ExtResource( 2 )]
+
+[node name="Platforms" type="Node2D" parent="Stage"]
+
+[node name="platform" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 40, 664 )
+scale = Vector2( 0.12, 1 )
+
+[node name="platform2" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 304, 648 )
+scale = Vector2( 0.12, 1 )
+
+[node name="platform3" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 304, 144 )
+scale = Vector2( 0.12, 1 )
+
+[node name="platform6" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 1008, 67 )
+scale = Vector2( 0.12, 1 )
+
+[node name="platform4" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 552, 200 )
+scale = Vector2( 0.519999, 1 )
+
+[node name="platform5" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 1032, 648 )
+scale = Vector2( 0.12, 1 )
+
+[node name="Grave3" parent="Stage" instance=ExtResource( 4 )]
+position = Vector2( 360, 645 )
+
+[node name="Grave4" parent="Stage" instance=ExtResource( 4 )]
+position = Vector2( 1072, 64 )
+
+[node name="Goal" parent="Stage" instance=ExtResource( 5 )]
+position = Vector2( 1096, 615 )
+
+[node name="Player" parent="Stage" instance=ExtResource( 3 )]
+position = Vector2( 80, 640 )

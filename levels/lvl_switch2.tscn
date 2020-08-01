@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Stage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Switch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SwitchPlatform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Grave.tscn" type="PackedScene" id=7]
+
+[node name="lvl_switch2" type="Node2D"]
+
+[node name="Stage" parent="." instance=ExtResource( 2 )]
+
+[node name="Platforms" type="Node2D" parent="Stage"]
+position = Vector2( 48, 8 )
+
+[node name="platform2" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 664, 344 )
+scale = Vector2( 0.24, 1 )
+
+[node name="platform4" parent="Stage/Platforms" instance=ExtResource( 1 )]
+position = Vector2( 800, 168 )
+scale = Vector2( 0.0399989, 1.00809 )
+
+[node name="SwitchPlatforms" type="Node2D" parent="Stage"]
+
+[node name="Switch" parent="Stage/SwitchPlatforms" instance=ExtResource( 6 )]
+position = Vector2( 336, 520 )
+scale = Vector2( 6.95056, 0.468949 )
+platform_type = 1
+
+[node name="Switch2" parent="Stage/SwitchPlatforms" instance=ExtResource( 6 )]
+position = Vector2( 112, 376 )
+scale = Vector2( 6.95056, 0.468949 )
+
+[node name="Goal" parent="Stage" instance=ExtResource( 4 )]
+position = Vector2( 879, 209 )
+
+[node name="Switch" parent="Stage" instance=ExtResource( 5 )]
+position = Vector2( 280, 344 )
+
+[node name="Grave3" parent="Stage" instance=ExtResource( 7 )]
+position = Vector2( 624, 416 )
+
+[node name="Player" parent="Stage" instance=ExtResource( 3 )]
+position = Vector2( 152, 360 )
